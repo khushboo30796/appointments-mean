@@ -1,0 +1,63 @@
+<section class="container p-5 my-5 bg-white rounded-5">
+    <div>
+        <div class = "h2"><b>Bookings</b></div>
+        <div style="color:gray">See your scheduled events from your calendar events links<br></div>
+    </div>
+
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item" *ngFor="let option of navigationOptions">
+                <button class="nav-link" (click)="getBookingsByStatus(option)">{{option}}</button>
+            </li>
+        </ul>
+        <div class="list-group" *ngFor="let bookingMonth of bookingByMonths">
+            <div class="h6 monthName" *ngIf="bookingMonth.month!=currentMonth"><b>{{bookingMonth.month}}</b></div>
+                <div class="row pl-0 border" *ngFor="let booking of bookingMonth.bookings" [ngClass]="{'serrated-border': booking.isRescheduleRequested}">
+                    <div class="col-lg-1 pt-2 pb-2 pl-0 pr-5 border-end dateCard">
+                        <!-- <div class="dateCard border-end"> -->
+                            <div class = "h6">{{booking.day}}</div>
+                            <div class = "h2">{{booking.date}}</div>
+                        <!-- </div> -->
+                    </div>
+                    <table class="col-lg-8 bookingDescriptionCard">
+                    <tr> 
+                       <td class="durationCard"> <i class="bi bi-clock-fill"></i>  {{booking.duration}} <i class="bi bi-exclamation-circle-fill" *ngIf="booking.isRescheduleRequested"></i></td>
+                        <td>{{booking.description}}</td>
+                    </tr>
+                    <tr>
+                        <td class="locationCard"><i class="bi bi-geo-alt-fill"></i>  {{booking.location}}</td>
+                        
+                        <td class="route d-flex p-2">
+                            <div class="profile-picture" *ngFor = "let person of booking.people">
+                                <img [src]="person.photo" [alt]="person.name"></div>
+                        </td>
+                    </tr>
+                    </table>
+                    <div class="col-lg-2 rescheduleRequestsCard">
+                        <span class = "badge rounded-pill" *ngFor="let request of booking.reschedulingRequests">
+                            {{request}} requested
+                        </span>
+                    </div>
+                    
+                    <div class="col-lg-1 optionsCard">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" id="hoverDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Edit <i class="bi bi-chevron-down"></i> <i class="bi bi-chevron-up"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledBy="hoverDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-clock-fill"></i> Reschedule Booking</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-caret-right-fill"></i> Request Reschedule</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-geo-alt-fill"></i> Edit Location</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person-plus-fill"></i> Invite People</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-x-circle-fill"></i> Cancel Event</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- </span> -->
+    
+        </div>
+
+
+</section>

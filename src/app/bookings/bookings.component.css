@@ -1,0 +1,208 @@
+.nav-pills
+{
+    background-color: rgb(240, 240, 240);
+    width: 50%;
+    border:none;
+    border-radius: 5px;
+    margin: 25px 25px 25px 0px;
+    padding: 5px 5px 5px 5px;
+}
+.nav-link
+{
+    color: gray;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    border: none;
+}
+.nav-link:focus
+{
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+}
+
+.monthName
+{
+    margin: 5px 0px 5px 0px;
+}
+
+.row
+{
+    border-radius: 5px;
+    padding: 15px;
+    margin: 2px;
+}
+.row:hover
+{
+    background-color: rgb(240, 240, 240);
+}
+.list-group
+{
+    margin: 2px;
+}
+
+.list-group-item
+{
+    border-radius: 5px;
+    padding: 0px;
+}
+.dateCard
+{
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+    /* border-right: 1px solid black; */
+    
+}
+.profile-container {
+    display: flex;
+  }
+  
+  .profile-picture {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin-left: -15px; /* Adjust the margin between pictures */
+    border: 2px solid #fff; /* Optional border style */
+    border-radius: 50%; /* To make the images circular */
+    overflow: hidden;
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+
+  .bookingDescriptionCard
+  {
+    margin: auto;
+  }
+
+  .rescheduleRequestsCard
+  {
+    margin: auto;
+
+  }
+  .bookingTimeCard
+  {
+    margin:auto;
+  }
+
+ .optionsCard
+ {
+    margin: auto;
+    justify-content: right;
+    text-align: right;
+
+ }
+ .dropdown-toggle
+ {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    border: none;
+
+ }
+ .dropdown-toggle:hover
+ {
+    background-color: black;
+    color: white;
+    border: none;
+ }
+ .dropdown-toggle::after
+ {
+    display: none;
+ }
+ .dropdown-menu
+ {
+    display: none;
+ }
+ .dropdown:hover .dropdown-menu
+ {
+    display: block;
+ }
+.dropdown .dropdown-toggle .bi-chevron-up
+ {
+    display: none;
+ }
+.dropdown .dropdown-toggle:hover .bi-chevron-down
+ {
+    display: none;
+ }
+.dropdown .dropdown-toggle:hover .bi-chevron-up
+ {
+    display: inline;
+ }
+
+ .badge
+ {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+    font-style: normal;
+ }
+ i
+ {
+    color: gray;
+ }
+
+ .dropdown-item:hover i
+ {
+    color: black;
+ }
+
+ .bi-exclamation-circle-fill
+ {
+    color: orangered;
+ }
+
+ #grid_groups_wrapper {
+    max-width: 800px;
+  }
+  
+  .group {
+    min-height: 40px;
+    height: auto;
+    line-height: 1.6rem;
+  }
+  
+  .grid-icon {
+    vertical-align: middle;
+    line-height: 1;
+  }
+  
+  .group-class {
+    height: 1rem;
+    line-height: 4rem;
+    vertical-align: middle;
+  }
+
+.durationCard
+{
+    width: 25%;
+    padding-left: 2px;
+}
+.locationCard
+{
+    overflow: hidden;
+    padding-left: 2px;
+}
+
+.serrated-border
+{
+background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgb(240, 240, 240) 20px,
+    rgb(240, 240, 240) 40px
+  );
+}
+
+
+  
+  
+  
+  
+  
+  

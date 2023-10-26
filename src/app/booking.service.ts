@@ -127,23 +127,8 @@ export class BookingService {
     };
     this.bookings.push(meeting);
 
-
-    // for(let i=1;i<=7;i++)
-    // {
-    //   let id: number = i;
-    //   let status: AppointmentStatus = AppointmentStatus.Upcoming;
-    //   let date: Date = new Date(2024, i, 12, 11, 0);
-    //   let location: string = "New Delhi";
-    //   let description: string = "Upcoming Meeting " + i;
-    //   let people: Person[] = [{name: "Khushboo", photo: "img.jpg"}];
-    //   let rescheduleRequest: Date[] = [new Date(2024, i, 12, 12, 0)];
-    //   let duration: Duration = {hours: 0, minutes: 30};
-    //   let meeting: Booking = {id: id, status: status, datetime: date, duration: duration, location: location, description: description,
-    //   people: people, reschedulingRequests: rescheduleRequest};
-    //   this.bookings.push(meeting);
-    // }
-    for (let i = 8; i <= 15; i++) {
-      let id: number = i;
+    for (let i = 7; i < 14; i++) {
+      let id: number = i+1;
       let status: AppointmentStatus = AppointmentStatus.Pending;
       let date: Date = this.bookings[i%7].datetime;
       let location: string = this.bookings[i%7].location;
@@ -157,8 +142,8 @@ export class BookingService {
       };
       this.bookings.push(meeting);
     }
-    for (let i = 16; i <= 23; i++) {
-      let id: number = i;
+    for (let i = 14; i < 21; i++) {
+      let id: number = i+1;
       let status: AppointmentStatus = AppointmentStatus.Recurring;
       let date: Date = this.bookings[i%7].datetime;
       let location: string = this.bookings[i%7].location;
@@ -172,8 +157,8 @@ export class BookingService {
       };
       this.bookings.push(meeting);
     }
-    for (let i = 24; i <= 31; i++) {
-      let id: number = i;
+    for (let i = 21; i < 28; i++) {
+      let id: number = i+1;
       let status: AppointmentStatus = AppointmentStatus.Past;
       let date: Date = this.bookings[i%7].datetime;
       let location: string = this.bookings[i%7].location;
@@ -187,8 +172,8 @@ export class BookingService {
       };
       this.bookings.push(meeting);
     }
-    for (let i = 32; i <= 39; i++) {
-      let id: number = i;
+    for (let i = 28; i < 35; i++) {
+      let id: number = i+1;
       let status: AppointmentStatus = AppointmentStatus.Cancelled;
       let date: Date = this.bookings[i%7].datetime;
       let location: string = this.bookings[i%7].location;
@@ -202,7 +187,7 @@ export class BookingService {
       };
       this.bookings.push(meeting);
     }
-
+    
 
   }
 }
